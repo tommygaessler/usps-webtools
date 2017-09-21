@@ -22,9 +22,9 @@ function USPSError(msg) {
     extendError(this, arguments[i]);
   }
 
-  if (!this.original) {
-    Error.captureStackTrace(this, arguments.callee);
-  }
+//   if (!this.original) {
+//     Error.captureStackTrace(this, arguments.callee);
+//   }
 
   this.name = 'USPS Webtools Error',
   this.message = typeof msg === 'string' ? msg : 'An error occurred';
